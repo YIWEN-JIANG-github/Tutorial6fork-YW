@@ -1,0 +1,23 @@
+---
+title: "Tut6"
+output:
+  html_document:
+    df_print: paged
+---
+
+```{r}
+knitr::opts_chunk$set(echo = TRUE, fig.width = 8, fig.height = 8, fig.alig = "center")
+```
+
+```{r}
+# Simulating data according to a normal distribution
+x <- seq(1:100)
+y <- rnorm(100) # Generating data form a normal distribution with mean 0 and variance 1
+data <- data.frame(x = x, y = y )
+p1 = ggplot(data, aes(x= x, y = y)) +
+geom_line()
+p2 = ggplot(data, aes(x= x, y = y)) +
+geom_point() grid.arrange(p1, p2)
+# Creating a data frame
+```
+
